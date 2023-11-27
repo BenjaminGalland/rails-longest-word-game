@@ -32,7 +32,7 @@ class GamesController < ApplicationController
   end
 
   def score
-    session[:score] ? @score = session[:score] : 0
+    session[:score] ? @score = session[:score] : @score = 0
     @answer = ""
     if params[:word] && params[:letters]
       @letters = params[:letters].chars
